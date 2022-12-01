@@ -10,4 +10,5 @@ with open("puzzle.txt") as file:
         food += int(line)
 
 elves.sort()
+print(elves[-1])
 print(sum(elves[-3:]))
