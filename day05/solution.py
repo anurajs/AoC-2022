@@ -2,11 +2,11 @@ import re
 
 file_name = 'puzzle.txt'
 
-regex = r"\[([A-Z])\]"
+stack_regex = r"\[([A-Z])\]"
 instruction_regex = r"move (\d+) from (\d+) to (\d+)"
 stacks = [[] for _ in range(10)]
 stacks2 = [[] for _ in range(10)]
-matcher = re.compile(regex)
+matcher = re.compile(stack_regex)
 with open(file_name) as file:
     while line := file.readline():
         matches = list(matcher.finditer(line))
