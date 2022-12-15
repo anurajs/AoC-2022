@@ -22,8 +22,7 @@ with open(file_name) as file:
     while line := file.readline().strip():
         m = matcher.match(line)
         amount, origin, to = [int(m.group(i)) for i in range(1, 4)]
-        stacks[to - 1] = [*stacks[to - 1],
-                          *reversed(stacks[origin - 1][-amount:])]
+        stacks[to - 1] = [*stacks[to - 1], *stacks[origin - 1][:-amount-1:-1]]
         stacks[origin - 1] = stacks[origin - 1][:-amount]
         stacks2[to - 1] = [*stacks2[to - 1], *stacks2[origin - 1][-amount:]]
         stacks2[origin - 1] = stacks2[origin - 1][:-amount]
