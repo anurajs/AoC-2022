@@ -29,8 +29,8 @@ with open(file_name) as file:
         stacks2[origin - 1] = stacks2[origin - 1][:-amount]
 
 
-result = [stack[-1] if len(stack) > 0 else '' for stack in stacks]
-result2 = [stack[-1] if len(stack) > 0 else '' for stack in stacks2]
+result = [stack[-1] if stack else '' for stack in stacks]
+result2 = [stack[-1] if stack else '' for stack in stacks2]
 
 print('part 1:', ''.join(result))
 print('part 2:', ''.join(result2))
