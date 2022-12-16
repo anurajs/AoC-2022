@@ -5,7 +5,7 @@ with open(file_name) as file:
         if(len(set(line[i-4:i])) == 4):
             print('part 1', i)
             break
-    for i in range(13, len(line)):
+    for i in range(i, len(line)):
         if(len(set(line[i-14:i])) == 14):
             print('part 2', i)
             break
