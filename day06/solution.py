@@ -1,7 +1,7 @@
 file_name = 'puzzle.txt'
 with open(file_name) as file:
     line = file.readline()
-    for i in range(3, len(line)):
+    for i in range(4, len(line)):
         if(len(set(line[i-4:i])) == 4):
             print('part 1', i)
             break
