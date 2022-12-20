@@ -25,7 +25,6 @@ file_name = "puzzle.txt"
 with open(file_name) as file:
     root = Node([], "/")
     current = root
-    flag = False
     while(line := file.readline().strip()):
         if line.startswith('$ ls'):
             children = []
