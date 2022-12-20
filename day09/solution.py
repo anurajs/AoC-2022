@@ -27,16 +27,12 @@ def tying_the_knot(part1):
                             break
                     if touching:
                         next_knot = knots[idx]
-                    elif knot[0] != next_knot[0] and knot[1] != next_knot[1]:
-                        addition = (1 if next_knot[0] > knot[0] else -1,
-                                    1 if next_knot[1] > knot[1] else -1)
-                        knots[idx] = add_coordinates(knot, addition)
                     else:
                         addition = (1 if next_knot[0] > knot[0] else 0 if next_knot[0] == knot[0] else -1,
                                     1 if next_knot[1] > knot[1] else 0 if next_knot[1] == knot[1] else -1,
                                     )
                         knots[idx] = add_coordinates(knot, addition)
-                    if(idx == (1 if part1 else 9)) and not touching:
+                    if(idx == (1 if part1 else 9)):
                         visited.add(knots[idx])
                     next_knot = knots[idx]
     return visited
