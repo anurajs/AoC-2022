@@ -25,9 +25,7 @@ def tying_the_knot(part1):
                         if next_knot == add_coordinates(knot, point):
                             touching = True
                             break
-                    if touching:
-                        next_knot = knots[idx]
-                    else:
+                    if not touching:
                         addition = (1 if next_knot[0] > knot[0] else 0 if next_knot[0] == knot[0] else -1,
                                     1 if next_knot[1] > knot[1] else 0 if next_knot[1] == knot[1] else -1,
                                     )
