@@ -9,7 +9,7 @@ def add_coordinates(a, b):
 
 
 def tying_the_knot(part1):
-    visited = set({(0, 0)})
+    visited = set()
     with open(file_name) as file:
         knots = [(0, 0) for _ in range(2 if part1 else 10)]
         while(line := file.readline()):
