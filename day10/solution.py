@@ -2,7 +2,7 @@ file_name = 'puzzle.txt'
 
 
 def cycle_forward(cycle, x, buffer, signal_strengths):
-    if((cycle % 40)-1 <= x + 1 and (cycle % 40)-1 >= x - 1):
+    if((cycle - 1) % 40 <= x + 1 and (cycle - 1) % 40 >= x - 1):
         buffer.append('#')
     else:
         buffer.append('.')
